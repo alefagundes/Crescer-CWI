@@ -1,0 +1,23 @@
+const geraValor = (number) => {
+    let values = []
+    for (let i = 0; i < number; i++) {
+        values[i] = Math.floor(Math.random() * 1000)
+    }
+
+    console.log(` ${values}`)
+    ///gera valores aleatorios inteiros, caso necessite ser valores de ponto flutuante, retire o floor e no fim
+    //da expressao use .toFix(number) => number é igual a quantas casas vc vai utilizar do valor de ponto flutuante
+    return values
+}
+
+const array1 = geraValor(10)
+const array2 = geraValor(10)
+
+//geraValor(10);
+const concatenaArrays = (value1, value2) => {
+    let concatenados = [...value1, value2]
+    //spred operator (...), junta elementos, pode ser utilizado para e demais utildades, bem legal
+    console.log(`${concatenados}`)
+}
+
+concatenaArrays(array1, array2)
